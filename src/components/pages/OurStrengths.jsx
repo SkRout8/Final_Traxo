@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaUserTie, FaEdit, FaTrash, FaPlus } from "react-icons/fa";
+import { FaUserTie, FaEdit, FaTrash } from "react-icons/fa";
 import Footer from "../Footer";
 
 import M1 from "../../images/M1.jpeg";
@@ -32,7 +32,6 @@ const OurStrengths = () => {
     { id: 9, name: "Sushanta Dalai", role: "Technician", image: M11, knowMore: "https://example.com/lisa" },
     { id: 10, name: "Sushanta Dalai", role: "Technician", image: M12, knowMore: "https://example.com/lisa" },
     { id: 11, name: "Sushanta Dalai", role: "Technician", image: M13, knowMore: "https://example.com/lisa" },
-
   ]);
 
   const directors = [
@@ -40,62 +39,9 @@ const OurStrengths = () => {
     { id: "d2", name: "Dhanujaya Pradhan", role: "Managing Director", image: S2, knowMore: "https://example.com/director2" },
   ];
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
-  const [editId, setEditId] = useState(null);
-  const [formData, setFormData] = useState({ name: "", role: "", imageFile: null, knowMore: "" });
   const [knowMoreModal, setKnowMoreModal] = useState({ open: false, content: "" });
 
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "imageFile" && files.length > 0) {
-      setFormData({ ...formData, imageFile: files[0] });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
-  };
-
-  const handleAddOrUpdate = (e) => {
-    e.preventDefault();
-    if (!formData.name || !formData.role || !formData.knowMore) return;
-    let imageURL = formData.imageFile ? URL.createObjectURL(formData.imageFile) : "";
-
-    if (isEditing) {
-      setTeam((prev) =>
-        prev.map((member) =>
-          member.id === editId
-            ? { ...member, ...formData, image: imageURL || member.image }
-            : member
-        )
-      );
-    } else {
-      setTeam([
-        ...team,
-        { id: Date.now(), ...formData, image: imageURL || "https://via.placeholder.com/300" },
-      ]);
-    }
-    setFormData({ name: "", role: "", imageFile: null, knowMore: "" });
-    setIsModalOpen(false);
-    setIsEditing(false);
-    setEditId(null);
-  };
-
-  const handleEdit = (id) => {
-    const member = team.find((m) => m.id === id);
-    setFormData({
-      name: member.name,
-      role: member.role,
-      knowMore: member.knowMore,
-      imageFile: null,
-    });
-    setIsEditing(true);
-    setEditId(id);
-    setIsModalOpen(true);
-  };
-
   const handleDelete = (id) => setTeam(team.filter((m) => m.id !== id));
-
-  const scrollingTeam = [...team, ...team];
 
   return (
     <div className="text-black pt-24">
@@ -144,18 +90,18 @@ const OurStrengths = () => {
         </div>
 
         {/* Auto-Scrolling Team Carousel */}
-        <div className="overflow-hidden">
+        <div className="overflow-hidden w-full">
           <motion.div
             className="flex gap-10"
-            animate={{ x: ["0%", "-100%"] }}
-            transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
+            animate={{ x: ["0%", "-50%"] }} // move half because array is duplicated
+            transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
+            style={{ width: "max-content" }}
           >
-            {scrollingTeam.map((member, idx) => (
+            {[...team, ...team].map((member, idx) => (
               <div
                 key={`${member.id}-${idx}`}
                 className="flex flex-col items-center bg-white rounded-xl shadow-md p-8 min-w-[280px] hover:shadow-xl transition"
               >
-
                 <img
                   src={member.image}
                   alt={member.name}
@@ -174,7 +120,6 @@ const OurStrengths = () => {
                 {isAdmin && (
                   <div className="flex gap-2 mt-3">
                     <button
-                      onClick={() => handleEdit(member.id)}
                       className="bg-yellow-400 p-2 rounded-full hover:bg-yellow-500"
                     >
                       <FaEdit className="text-white" />
