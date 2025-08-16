@@ -43,6 +43,9 @@ import {
   FaRobot,
   FaSatelliteDish,
   FaShieldAlt,
+  FaSatellite,
+  FaBroadcastTower,
+  FaFireExtinguisher,
 } from "react-icons/fa";
 import logo from "../images/logo.png";
 
@@ -256,19 +259,27 @@ const NavbarTraxo = () => {
       { icon: <FaNetworkWired />, label: "V2X Communication in Vehicles" },
       { icon: <FaSimCard />, label: "M2M eSIM Manufacturing" },
     ],
-    products: [
-      {
-        icon: <FaCogs />,
-        label: "Hardware",
-        hasSubmenu: true,
-        submenuKey: "hardware",
-        submenu: [
-          { icon: <FaMicrochip />, label: "AIS-140 (VLTD)", path: "/products/hardware/ais-140-vltd" },
-          { icon: <FaCamera />, label: "Vehicle Camera System", path: "/products/hardware/vehicle-camera-system" },
-          // ...rest of hardware submenu
-        ],
-      },
+ products: [
+  {
+    icon: <FaCogs />,
+    label: "Hardware",
+    hasSubmenu: true,
+    submenuKey: "hardware",
+    submenu: [
+      { icon: <FaMicrochip />, label: "AIS-140 (VLTD)", path: "/products/hardware/ais-140-vltd" },
+      { icon: <FaCamera />, label: "Vehicle Camera System", path: "/products/hardware/vehicle-camera-system" },
+      { icon: <FaTools />, label: "OBD-II Telematics", path: "/products/hardware/obd-ii-telematics" },
+      { icon: <FaFireExtinguisher />, label: "Auto Fire Meter", path: "/products/hardware/auto-fire-meter" },
+      { icon: <FaParking />, label: "Smart Parking Systems", path: "/products/hardware/smart-parking-systems" },
+      { icon: <FaBroadcastTower />, label: "Radar & LIDAR", path: "/products/hardware/radar-lidar" },
+      { icon: <FaSatellite/>, label: "GPS + IMU", path: "/products/hardware/gps-imu" },
+      { icon: <FaBroadcastTower />, label: "Ultrasonic Sensors", path: "/products/hardware/ultrasonic-sensors" },
+      { icon: <FaSimCard/>, label: "M2M eSIM Manufacturing", path: "/products/hardware/m2m-esim-manufacturing" },
+      { icon: <FaNetworkWired />, label: "V2X Communication in Vehicles", path: "/products/hardware/v2x-communication" },
     ],
+  },
+ ]
+
   };
 
   const dropdownVariants = {

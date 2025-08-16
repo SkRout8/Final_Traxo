@@ -197,7 +197,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import traxo from "../../images/traxo2.png";
+import traxo from "../../images/traxo22.png";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
 
