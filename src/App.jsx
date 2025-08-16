@@ -66,6 +66,11 @@ import UltrasonicSensorss from "./components/pages/UltrasonicSensorss";
 import M2MeSIM from "./components/pages/M2MeSIM";
 import V2XCommunication from "./components/pages/V2XCommunication";
 import SmartParkingSystem from "./components/pages/SmartParkingSystemss";
+import NonAIS140 from "./components/pages/NonAIS140";
+import SOS from "./components/pages/SOS";
+import VMIS from "./components/pages/VMIS";
+import FMS from "./components/pages/FMS";
+import EMS from "./components/pages/EMS";
 
 
 function App() {
@@ -144,23 +149,23 @@ function App() {
         <Route path="/services/Advanced-Driver-Assistance-System/Embedded-Systems" element={<EmbeddedSystem />} />
         <Route path="/services/Advanced-Driver-Assistance-System/AI-&-Computer-Vision" element={<AiComputerVision />} />
 
-        <Route path="/products/hardware/ais-140-vltd" element={<AIS140/>} />
-        <Route path="/products/hardware/vehicle-camera-system" element={<VehicleCameraSystem/>} />
-        <Route path="/products/hardware/obd-ii-telematics" element={<OBDII/>} />
+        <Route path="/products/hardware/ais-140-vltd" element={<AIS140 />} />
+        <Route path="/products/hardware/vehicle-camera-system" element={<VehicleCameraSystem />} />
+        <Route path="/products/hardware/obd-ii-telematics" element={<OBDII />} />
         <Route path="/products/hardware/auto-fire-meter" element={<AutoFireMeter />} />
         <Route path="/products/hardware/smart-parking-systems" element={<SmartParkingSystem />} />
-        <Route path="/products/hardware/radar-lidar" element={<RadarLidar />} />
-        <Route path="/products/hardware/gps-imu" element={<GPSIMUU/>} />
-        <Route path="/products/hardware/ultrasonic-sensors" element={<UltrasonicSensorss />} />
+        <Route path="/products/hardware/NonAIS140" element={<NonAIS140 />} />
         <Route path="/products/hardware/m2m-esim-manufacturing" element={<M2MeSIM />} />
-        <Route path="/products/hardware/v2x-communication" element={<V2XCommunication />} />
+        <Route path="/products/hardware/SOS_Emergency_Management" element={<SOS />} />
 
         {/* ===== Products :Hardware===== */}
         <Route path="/products/hardware/ais-140-vltd" element={<AsiVltd />} />
         <Route path="/products/hardware/vehicle-camera-system" element={<VechileCamereSystem />} />
 
         {/* ===== Products :Software===== */}
-
+        <Route path="/products/software/vehicle-management-information-system" element={<VMIS />} />
+        <Route path="/products/software/fleet-management-software" element={<FMS />} />
+        <Route path="/products/software/esim-management-software" element={<EMS />} />
 
       </Routes>
 

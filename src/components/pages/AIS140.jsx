@@ -124,7 +124,12 @@ export default function AIS140() {
             className="flex-1"
           >
             <h1 className="text-4xl lg:text-5xl text-black font-bold mb-6">
-              AIS 140 VLTD – Advanced Vehicle Tracking Device
+              AIS 140 VLTD – Traxo Elite 
+               <h1 className="text-4xl lg:text-5xl text-black font-bold mb-6">
+             Part No-TRAXO0101
+              
+            </h1>
+
             </h1>
             <p className="text-lg text-black mb-6 ">
               Ensure compliance, safety, and efficiency with our AIS 140 certified VLTD.
