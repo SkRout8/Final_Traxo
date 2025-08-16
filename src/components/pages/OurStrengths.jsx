@@ -16,27 +16,30 @@ import M12 from "../../images/M12.jpeg";
 import M13 from "../../images/M13.jpeg";
 import S1 from "../../images/S1.jpeg";
 import S2 from "../../images/S2.jpeg";
-
+import CCO from "../../images/CCO.jpeg";
+import SE from "../../images/SE.jpeg";
 const OurStrengths = () => {
   const isAdmin = false;
 
   const [team, setTeam] = useState([
-    { id: 1, name: "Saleena Patra", role: "HR Specialist", image: M1, knowMore: "https://www.linkedin.com/in/saleena-patra-7044b5247/" },
-    { id: 2, name: "Dipti Bala Mohanty", role: "CRM Lead", image: M2, knowMore: "https://example.com/jane" },
-    { id: 3, name: "Deepa Das", role: "Finance Lead", image: M3, knowMore: "https://example.com/robert" },
-    { id: 4, name: "Karishma Khatun", role: "CRM Lead", image: M4, knowMore: "https://example.com/emily" },
-    { id: 5, name: "Srikanta Dalei", role: "Technician", image: M5, knowMore: "https://example.com/michael" },
-    { id: 6, name: "Rama Ch. Ghantyat", role: "Technician", image: M6, knowMore: "https://example.com/sarah" },
-    { id: 7, name: "Monalisha Bhoi", role: "Technician", image: M7, knowMore: "https://example.com/david" },
-    { id: 8, name: "Rajendra kumar Kar", role: "Technician", image: M8, knowMore: "https://example.com/sophia" },
-    { id: 9, name: "Sushanta Dalai", role: "Technician", image: M11, knowMore: "https://example.com/lisa" },
-    { id: 10, name: "Sushanta Dalai", role: "Technician", image: M12, knowMore: "https://example.com/lisa" },
-    { id: 11, name: "Sushanta Dalai", role: "Technician", image: M13, knowMore: "https://example.com/lisa" },
+    { id: 1, name: "Saleena Patra", role: "HR", image: M1, knowMore: "https://www.linkedin.com/in/saleena-patra-7044b5247/" },
+    { id: 2, name: "Dipiti Bala Mohanty", role: "BUSINESS OPERATION EXECUTIVE", image: M2, knowMore: "https://example.com/jane" },
+    { id: 3, name: "Deepa Das", role: "ACCOUNTANT", image: M3, knowMore: "https://example.com/robert" },
+    { id: 4, name: "Karishma Khatun", role: "RECEPTIONIST", image: M4, knowMore: "https://example.com/emily" },
+    { id: 5, name: "Srikanta Dalei", role: "TECHNICAL COORDINATOR", image: M5, knowMore: "https://example.com/michael" },
+    { id: 6, name: "Ramchandra Gantayat", role: "TECHNICAL COORDINATOR", image: M6, knowMore: "https://example.com/sarah" },
+    { id: 7, name: "Monalisha Bhoi", role: "CUSTOMER SERVICE REPRESENTATIVE", image: M7, knowMore: "https://example.com/david" },
+    { id: 8, name: "Rajendra kumar Kar", role: "PRODUCTION MANAGER", image: M8, knowMore: "https://example.com/sophia" },
+    { id: 9, name: "Rajat barik", role: "TECHNICIAN", image: M11, knowMore: "https://example.com/lisa" },
+    { id: 10, name: "Rajendra Jena", role: "TECHNICIAN", image: M12, knowMore: "https://example.com/lisa" },
+    { id: 11, name: "Sushant Dalei", role: "TECHNICIAN", image: M13, knowMore: "https://example.com/lisa" },
+    { id: 12, name: "Rabindra Kumar Sahu", role: "Chief Commercial Officer", image: CCO, knowMore: "https://example.com/lisa" },
+     { id: 12, name: "Sanjit Sahu", role: "SALES EXECUTIVE", image:SE, knowMore: "https://example.com/lisa" },
   ]);
 
   const directors = [
     { id: "d1", name: "Mrutyunjay Pradhan", role: "Managing Director", image: S1, knowMore: "https://www.linkedin.com/in/mrutyunjay-pradhan-710700130/" },
-    { id: "d2", name: "Dhanujaya Pradhan", role: "Managing Director", image: S2, knowMore: "https://example.com/director2" },
+    { id: "d2", name: "Dhanurjay Pradhan", role: "Director", image: S2, knowMore: "https://example.com/director2" },
   ];
 
   const [knowMoreModal, setKnowMoreModal] = useState({ open: false, content: "" });
@@ -83,7 +86,7 @@ const OurStrengths = () => {
       {/* Team Section */}
       <section className="py-20 bg-yellow-50">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-extrabold">Our Team Members</h2>
+          <h2 className="text-4xl md:text-5xl font-extrabold">Our Members</h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto mt-4">
             Skilled experts committed to delivering top-quality solutions and driving innovation.
           </p>
