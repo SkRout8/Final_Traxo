@@ -115,7 +115,7 @@ export default function AIS140() {
   return (
     <div className="w-full bg-white pt-20">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-gray-900 to-yellow-300 text-white py-20">
+      <section className="bg-white text-white py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-10">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
@@ -123,15 +123,15 @@ export default function AIS140() {
             transition={{ duration: 0.8 }}
             className="flex-1"
           >
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6">
+            <h1 className="text-4xl lg:text-5xl text-black font-bold mb-6">
               AIS 140 VLTD – Advanced Vehicle Tracking Device
             </h1>
-            <p className="text-lg text-gray-100 mb-6">
+            <p className="text-lg text-black mb-6 ">
               Ensure compliance, safety, and efficiency with our AIS 140 certified VLTD.
               Designed for precision, durability, and real-time monitoring.
             </p>
            <Link to="/customercare">
-  <button className="bg-white text-green-700 px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-gray-100 transition">
+  <button className="bg-black text-yellow-400 px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-gray-100 transition ">
     Request a Demo
   </button>
 </Link>

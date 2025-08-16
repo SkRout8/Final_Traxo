@@ -22,9 +22,9 @@ const OurStrengths = () => {
 
   const [team, setTeam] = useState([
     { id: 1, name: "Saleena Patra", role: "HR Specialist", image: M1, knowMore: "https://www.linkedin.com/in/saleena-patra-7044b5247/" },
-    { id: 2, name: "Dipti Bala Mohanty", role: "UI/UX Designer", image: M2, knowMore: "https://example.com/jane" },
-    { id: 3, name: "Deepa Das", role: "Backend Engineer", image: M3, knowMore: "https://example.com/robert" },
-    { id: 4, name: "Karishma Khatun", role: "Frontend Developer", image: M4, knowMore: "https://example.com/emily" },
+    { id: 2, name: "Dipti Bala Mohanty", role: "CRM Lead", image: M2, knowMore: "https://example.com/jane" },
+    { id: 3, name: "Deepa Das", role: "Finance Lead", image: M3, knowMore: "https://example.com/robert" },
+    { id: 4, name: "Karishma Khatun", role: "CRM Lead", image: M4, knowMore: "https://example.com/emily" },
     { id: 5, name: "Srikanta Dalei", role: "Technician", image: M5, knowMore: "https://example.com/michael" },
     { id: 6, name: "Rama Ch. Ghantyat", role: "Technician", image: M6, knowMore: "https://example.com/sarah" },
     { id: 7, name: "Monalisha Bhoi", role: "Technician", image: M7, knowMore: "https://example.com/david" },

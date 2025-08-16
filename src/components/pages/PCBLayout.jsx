@@ -92,7 +92,7 @@ export default function PCBLayout() {
                 cost — optimized for your fabrication and assembly partners.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
-                <a href="#overview" className="px-5 py-2.5 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700 transition">
+                <a href="#overview" className="px-5 py-2.5 rounded-xl bg-yellow-600 text-white font-semibold hover:bg-indigo-700 transition">
                   Explore Our Approach
                 </a>
                 <a href="/contact" className="px-5 py-2.5 rounded-xl bg-white border border-gray-200 font-semibold text-gray-800 hover:border-gray-300 transition">
@@ -138,7 +138,7 @@ export default function PCBLayout() {
                 </ul>
               </div>
 
-              <div className="mt-6 bg-gradient-to-br from-indigo-600 to-indigo-700 text-white rounded-2xl p-5 shadow-md">
+              <div className="mt-6 bg-black text-white rounded-2xl p-5 shadow-md">
                 <h4 className="font-semibold">Have constraints to meet?</h4>
                 <p className="mt-1 text-sm text-indigo-100">
                   Share stackup, impedance, enclosure and fab rules — we’ll map a plan.
@@ -315,7 +315,7 @@ export default function PCBLayout() {
                 {timeline.map((t, i) => (
                   <li key={i} className="ml-6 mb-8">
                     <span className="absolute -left-2 flex h-4 w-4 items-center justify-center">
-                      <span className="h-3 w-3 rounded-full bg-indigo-600"></span>
+                      <span className="h-3 w-3 rounded-full bg-black"></span>
                     </span>
                     <h3 className="font-semibold text-gray-900">{t.step}</h3>
                     <p className="text-gray-600">{t.text}</p>
@@ -380,7 +380,7 @@ export default function PCBLayout() {
             </section>
 
             {/* CTA */}
-            <section className="rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 p-8 text-white shadow-lg">
+            <section className="rounded-2xl bg-black p-8 text-white shadow-lg">
               <div className="grid md:grid-cols-3 gap-6 items-center">
                 <div className="md:col-span-2">
                   <h3 className="text-2xl font-bold">Let’s layout your next board.</h3>
@@ -392,7 +392,7 @@ export default function PCBLayout() {
                 <div className="md:text-right">
                   <a
                     href="/contact"
-                    className="inline-block bg-white text-indigo-700 font-semibold px-6 py-3 rounded-xl hover:bg-indigo-50"
+                    className="inline-block bg-white text-black font-semibold px-6 py-3 rounded-xl hover:bg-indigo-50"
                   >
                     Start a Project
                   </a>

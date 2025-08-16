@@ -65,6 +65,7 @@ import GPSIMUU from "./components/pages/GPSIMUU";
 import UltrasonicSensorss from "./components/pages/UltrasonicSensorss";
 import M2MeSIM from "./components/pages/M2MeSIM";
 import V2XCommunication from "./components/pages/V2XCommunication";
+import SmartParkingSystem from "./components/pages/SmartParkingSystemss";
 
 
 function App() {
@@ -147,7 +148,7 @@ function App() {
         <Route path="/products/hardware/vehicle-camera-system" element={<VehicleCameraSystem/>} />
         <Route path="/products/hardware/obd-ii-telematics" element={<OBDII/>} />
         <Route path="/products/hardware/auto-fire-meter" element={<AutoFireMeter />} />
-        <Route path="/products/hardware/smart-parking-systems" element={<SmartParkingSystems />} />
+        <Route path="/products/hardware/smart-parking-systems" element={<SmartParkingSystem />} />
         <Route path="/products/hardware/radar-lidar" element={<RadarLidar />} />
         <Route path="/products/hardware/gps-imu" element={<GPSIMUU/>} />
         <Route path="/products/hardware/ultrasonic-sensors" element={<UltrasonicSensorss />} />

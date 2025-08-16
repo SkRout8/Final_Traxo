@@ -2,15 +2,14 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Footer from "../Footer";
-import V2X from "../../images/C55.png"; // replace with actual V2X image if available
+import SPS from "../../images/traxo.png"; // update path if different
 
-function V2XCommunication() {
+function SmartParkingSystem() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-white text-black py-20 pt-32">
+      <section className="relative bg-white text-black py-20 pt-28">
         <div className="container mx-auto px-6 flex flex-col lg:flex-row items-center">
-          {/* Left Content */}
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -18,14 +17,13 @@ function V2XCommunication() {
             className="lg:w-1/2 space-y-6"
           >
             <h1 className="text-4xl lg:text-5xl text-black font-bold leading-tight">
-              V2X Communication
+              Smart Parking System Device
             </h1>
-            <p className="text-lg text-black">
-              Vehicle-to-Everything (V2X) Communication is a cutting-edge
-              technology that enables vehicles to interact with each other,
-              roadside infrastructure, pedestrians, and networks. This enhances
-              road safety, reduces traffic congestion, and paves the way for
-              autonomous mobility.
+            <p className="text-lg  text-black">
+              A next-generation IoT-enabled solution for efficient parking
+              management. Our Smart Parking System uses advanced sensors,
+              real-time data, and cloud connectivity to streamline parking space
+              utilization, reduce congestion, and enhance urban mobility.
             </p>
             <div className="flex space-x-4">
               <a
@@ -34,17 +32,21 @@ function V2XCommunication() {
               >
                 Request Demo
               </a>
+              
             </div>
           </motion.div>
 
-          {/* Right Image */}
           <motion.div
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             className="lg:w-1/2 mt-10 lg:mt-0"
           >
-            <img src={V2X} alt="V2X Communication" className="" />
+            <img
+              src={SPS}
+              alt="Smart Parking System"
+              className=""
+            />
           </motion.div>
         </div>
       </section>
@@ -67,22 +69,22 @@ function V2XCommunication() {
               {
                 title: "Key Features",
                 content:
-                  "• Real-time Vehicle-to-Vehicle (V2V) alerts\n• Vehicle-to-Infrastructure (V2I) traffic updates\n• Enhanced road safety through collision avoidance\n• Low-latency communication with 5G and DSRC",
+                  "Real-time parking availability detection, mobile app integration, automated payment support, cloud-based monitoring, and predictive analytics for space optimization.",
               },
               {
                 title: "Technical Specs",
                 content:
-                  "• Communication: DSRC / C-V2X (5G NR)\n• Range: Up to 1km in open areas\n• Latency: <10ms ultra-low delay\n• Integration: On-board units (OBU) & Roadside units (RSU)",
+                  "• Ultrasonic/IR Sensors for vehicle detection\n• Wireless Connectivity (LoRaWAN / NB-IoT / Wi-Fi)\n• Cloud Dashboard & APIs for integration\n• Weatherproof & vandal-resistant design",
               },
               {
                 title: "Use Cases",
                 content:
-                  "• Smart Traffic Management Systems\n• Collision Warning & Avoidance\n• Autonomous Vehicle Support\n• Emergency Vehicle Priority Routing",
+                  "• Smart City Parking Solutions\n• Shopping Malls & Airports\n• Corporate & University Campuses\n• Residential Complexes & Hospitals",
               },
               {
                 title: "Benefits",
                 content:
-                  "• Saves lives by reducing accidents\n• Improves urban traffic efficiency\n• Reduces fuel consumption & emissions\n• Enables seamless autonomous driving ecosystem",
+                  "• Reduces traffic congestion & fuel waste\n• Provides drivers with real-time parking guidance\n• Enables automated & cashless payments\n• Helps city authorities plan better urban mobility",
               },
             ].map((item, idx) => (
               <details
@@ -93,9 +95,7 @@ function V2XCommunication() {
                   {item.title}
                   <ChevronDown className="w-5 h-5 transition-transform group-open:rotate-180" />
                 </summary>
-                <p className="mt-4 text-gray-600 whitespace-pre-line">
-                  {item.content}
-                </p>
+                <p className="mt-4 text-gray-600 whitespace-pre-line">{item.content}</p>
               </details>
             ))}
           </div>
@@ -105,11 +105,11 @@ function V2XCommunication() {
       {/* CTA Section */}
       <section className="bg-yellow-600 py-16 text-white text-center">
         <h2 className="text-3xl font-bold mb-4">
-          Drive the Future with V2X Technology
+          Revolutionize Parking with Smart Solutions
         </h2>
         <p className="text-lg mb-6">
-          Enhance road safety and mobility with Vehicle-to-Everything
-          Communication.
+          Deploy IoT-enabled Smart Parking Systems to make urban mobility more
+          efficient and user-friendly.
         </p>
         <a
           href="/customercare"
@@ -124,4 +124,4 @@ function V2XCommunication() {
   );
 }
 
-export default V2XCommunication;
+export default SmartParkingSystem;
